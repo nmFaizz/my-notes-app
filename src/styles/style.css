@@ -1,0 +1,245 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(39, 39, 39);
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+
+button {
+    cursor: pointer;
+}
+
+.navigation-bar {
+    display: flex;
+    padding: 0.7rem 4rem;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.notes-app__input-container {
+    display: flex;
+    background-color: rgb(50, 50, 50);
+}
+
+.notes-input {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: auto;
+    padding: 1rem;
+}
+
+.notes-input #input-header {
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+.notes-input #input-text {
+    font-size: 1rem;
+}
+
+.notes-input h1 {
+    font-size: 2.5rem;
+}
+
+.notes-input .word-count {
+    margin: 1rem 0.4rem;
+}
+
+input,
+textarea {
+    font-family: 'Poppins', sans-serif;
+    border: none;
+    resize: none;
+    padding: 0.3rem 0;
+    background: none;
+    color: white;
+}
+
+.notes-input textarea:focus,
+.notes-input input#input-header:focus {
+    outline: none;
+}
+
+.notes-input #notes-input__add {
+    background-color: rgb(50, 50, 50);
+}
+
+.notes-input__button button {
+    padding: 1rem 0;
+    border: 1px solid white;
+    background: none; 
+    color: white;
+    border-radius: 25px;
+    width: 100%;
+}
+
+.search-notes #input-search {
+    width: 300px;
+    background: none;
+    border: none;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+
+.search-notes #input-search:focus {
+    outline: none;
+}
+
+.search-notes {
+    padding: 0.5rem 1rem;
+    border: 1px solid white;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+}
+
+/* clears the ‘X’ from Chrome */
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration { display: none; }
+
+.notes-list__item {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(218px, 1fr));
+    grid-gap: 20px;
+}
+
+.notes-list {
+    padding: 2rem 5rem;
+    max-width: 1250px;
+    margin: auto;
+}
+
+.notes-item {
+    border-radius: 10px;
+    padding: 1rem;
+    background-color: rgb(50, 50, 50);
+    position: relative;
+    padding-bottom: 3rem;
+}
+
+.notes-list h2 {
+    padding: 2rem 0;
+}
+
+.notes-item p {
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    margin: 1rem 0;
+}
+
+.notes-item span {
+    color: gray;
+}
+
+.notes-item h3 {
+    font-weight: bold;
+    font-size: 1.4rem;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+.notes-item__btn button {
+    background: none;
+    border: none;
+    color: white;
+    flex: 1;
+    padding: 0.4rem 0;
+    border-radius: 25px;
+}
+
+.notes-item__btn {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    width: 100%;
+    padding: 0 1rem;
+}
+
+.notes-item__btn #delete-btn {
+    background-color: rgb(255, 80, 80);
+}
+
+.notes-item__btn #archive-btn {
+    background-color: rgb(108, 108, 255);
+}
+
+.notes-item textarea {
+    width: 100%;
+}
+
+.footer-app {
+    background-color: black;
+    padding: 3rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5rem;
+}
+
+.footer-app p {
+    font-size: 1rem;
+}
+
+.footer-app__icon-socmed {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.footer-app__icon-socmed i {
+    font-size: 1.3rem;
+}
+
+@media screen and (max-width: 728px) {
+    .notes-app__notes-list {
+        padding: 0 1.4rem;
+    }
+
+    .notes-input {
+        max-width: none;
+        width: 100%;
+    }
+
+    .navigation-bar {
+       padding: 1rem 0.5rem;
+       gap: 1rem;
+    }
+
+    .navigation-bar #logo {
+        font-size: 80%;
+    }
+
+    .search-notes #input-search {
+        width: 170px;
+    }
+
+    .notes-list {
+        width: 100%;
+        padding: 1rem 0;
+    }
+    
+    .notes-list__item {
+        max-width: none;
+    }
+}
+
+
+
+
+
