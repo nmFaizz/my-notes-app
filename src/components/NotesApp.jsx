@@ -38,16 +38,10 @@ class NotesApp extends React.Component {
         })
     }
 
-    onNotesDeleteHandler(id, type) {
-        if (type === "Saved Notes") {
-            this.setState(prevState => ({
+    onNotesDeleteHandler(id) {
+        this.setState(prevState => ({
                 notes: prevState.notes.filter(note => note.id !== id)
-            }));
-        } else if (type === "Archived Notes") {
-            this.setState(pervState => ({
-                archived: pervState.archived.filter(archive => archive.id !== id)
-            }))
-        }
+        }));
 
     }
 
