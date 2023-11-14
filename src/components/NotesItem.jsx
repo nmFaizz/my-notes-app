@@ -1,13 +1,13 @@
 import React from "react";
 import NotesItemButton from "./NotesItemButton";
 
-function NotesItem({ id, header, text, date, onDelete, onArchive, type, searched }) {
+function NotesItem({ id, title, body, createdAt, onDelete, type, searched, showDate }) {
     return (
         <div className="notes-item" style={searched}>
-            <h3>{header}</h3>
-            <span>{date}</span>
-            <p>{text}</p>
-            <NotesItemButton onDelete={onDelete} id={id} onArchive={onArchive} type={type} />
+            <h3>{title}</h3>
+            <span>{showDate(createdAt)}</span>
+            <p>{body}</p>
+            <NotesItemButton onDelete={onDelete} id={id} type={type} />
         </div>
     )
 }

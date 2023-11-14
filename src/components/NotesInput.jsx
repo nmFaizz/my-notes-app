@@ -7,8 +7,8 @@ export default class NotesInput extends React.Component {
 
         this.state = {
             counter: 50,
-            header: '',
-            text: ''
+            title: '',
+            body: ''
         }
 
         this.onHeaderInputHandler = this.onHeaderInputHandler.bind(this)
@@ -19,7 +19,7 @@ export default class NotesInput extends React.Component {
     onHeaderInputHandler(event) {
         if (event.target.value.length <= 50) {
             this.setState({
-                header: event.target.value,
+                title: event.target.value,
                 counter: 50 - event.target.value.length
             })
         }
@@ -27,15 +27,15 @@ export default class NotesInput extends React.Component {
 
     onTextAreaInputHandler(event) {
         this.setState({
-            text: event.target.value
+            body: event.target.value
         })
     }
 
     onSubmitNoteEventHandler() {
         this.props.addNotes(this.state)
         this.setState({
-            header: '',
-            text: '',
+            title: '',
+            body: '',
             counter: 50
         })
     } 
@@ -43,8 +43,8 @@ export default class NotesInput extends React.Component {
     render() {
         return (
             <div className="notes-input">
-                <input type="text" placeholder="Add Header" id="input-header" value={this.state.header} onChange={this.onHeaderInputHandler} />
-                <textarea rows="7" placeholder="Type your text here!" id="input-text" value={this.state.text} onChange={this.onTextAreaInputHandler}></textarea>
+                <input type="text" placeholder="Add Header" id="input-header" value={this.state.title} onChange={this.onHeaderInputHandler} />
+                <textarea rows="7" placeholder="Type your text here!" id="input-text" value={this.state.body} onChange={this.onTextAreaInputHandler}></textarea>
                 <p className="word-count">Header characters left : {this.state.counter}</p>
                 <NotesInputButton submitNotes={this.onSubmitNoteEventHandler} />
             </div>

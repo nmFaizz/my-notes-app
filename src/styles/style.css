@@ -71,12 +71,16 @@ textarea {
 }
 
 .notes-input__button button {
-    padding: 1rem 0;
+    padding: 0.7rem 0;
     border: 1px solid white;
     background: none; 
     color: white;
-    border-radius: 25px;
+    border-radius: 7px;
     width: 100%;
+}
+
+.notes-input__button button:hover {
+    background-color: rgb(57, 57, 57);
 }
 
 .search-notes #input-search {
@@ -92,11 +96,12 @@ textarea {
 }
 
 .search-notes {
-    padding: 0.5rem 1rem;
+    padding: 0.3rem 1rem;
     border: 1px solid white;
-    border-radius: 50px;
+    border-radius: 7px;
     display: flex;
     align-items: center;
+    background-color: rgb(54, 54, 54);
 }
 
 /* clears the ‘X’ from Chrome */
@@ -135,10 +140,12 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
     text-overflow: ellipsis;
     overflow: hidden;
     margin: 1rem 0;
+    font-size: 0.8rem;
 }
 
 .notes-item span {
     color: gray;
+    font-size: 0.9rem;
 }
 
 .notes-item h3 {
@@ -156,7 +163,7 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
     color: white;
     flex: 1;
     padding: 0.4rem 0;
-    border-radius: 25px;
+    border-radius: 6px;
 }
 
 .notes-item__btn {
@@ -174,8 +181,16 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
     background-color: rgb(255, 80, 80);
 }
 
+.notes-item__btn #delete-btn:hover {
+    background-color: rgb(255, 108, 108);
+}
+
 .notes-item__btn #archive-btn {
     background-color: rgb(108, 108, 255);
+}
+
+.notes-item__btn #archive-btn:hover {
+    background-color: rgb(144, 144, 255);
 }
 
 .notes-item textarea {
@@ -227,6 +242,10 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
 
     .search-notes #input-search {
         width: 170px;
+    }
+
+    .notes-input__button button {
+        padding: 0.8rem 0;
     }
 
     .notes-list {
