@@ -1,21 +1,21 @@
 import React from "react";
 import NotesInputButton from "./NotesInputButton";
-
+ 
 export default class NotesInput extends React.Component {
     constructor(props) {
         super(props)
-
+ 
         this.state = {
             counter: 50,
             title: '',
             body: ''
         }
-
+ 
         this.onHeaderInputHandler = this.onHeaderInputHandler.bind(this)
         this.onTextAreaInputHandler = this.onTextAreaInputHandler.bind(this)
         this.onSubmitNoteEventHandler = this.onSubmitNoteEventHandler.bind(this)
     }
-
+ 
     onHeaderInputHandler(event) {
         if (event.target.value.length <= 50) {
             this.setState({
@@ -24,13 +24,13 @@ export default class NotesInput extends React.Component {
             })
         }
     }
-
+ 
     onTextAreaInputHandler(event) {
         this.setState({
             body: event.target.value
         })
     }
-
+ 
     onSubmitNoteEventHandler() {
         this.props.addNotes(this.state)
         this.setState({
@@ -39,7 +39,7 @@ export default class NotesInput extends React.Component {
             counter: 50
         })
     } 
-
+ 
     render() {
         return (
             <div className="notes-input">

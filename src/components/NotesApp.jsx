@@ -20,7 +20,7 @@ class NotesApp extends React.Component {
         this.onFilteredSearchHandler = this.onFilteredSearchHandler.bind(this)
     }
 
-    onAddNotesHandler({title, body}) {
+    onAddNotesHandler({ title, body }) {
         this.setState((pervState) => {
             return {
                 notes: [
@@ -29,7 +29,7 @@ class NotesApp extends React.Component {
                         id: +new Date(),
                         title: title,
                         body: body,
-                        createdAt: showFormattedDate(new Date()),
+                        createdAt: new Date().toISOString(),
                         archived: false,
                         isSearched: true
                     }
@@ -39,16 +39,9 @@ class NotesApp extends React.Component {
     }
 
     onNotesDeleteHandler(id, type) {
-        if (type === "Saved Notes") {
-            this.setState(prevState => ({
-                notes: prevState.notes.filter(note => note.id !== id)
-            }));
-        } else if (type === "Archived Notes") {
-            this.setState(pervState => ({
-                archived: pervState.archived.filter(archive => archive.id !== id)
-            }))
-        }
-
+        this.setState(prevState => ({
+            notes: prevState.notes.filter(note => note.id !== id)
+        }));
     }
 
 

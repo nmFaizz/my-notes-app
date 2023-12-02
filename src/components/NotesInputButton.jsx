@@ -1,5 +1,5 @@
 import React from "react";
-
+ 
 function NotesInputButton({ submitNotes }) {
     return (
         <div className="notes-input__button">
@@ -7,7 +7,7 @@ function NotesInputButton({ submitNotes }) {
         </div>
     )
 }
-
+ 
 export default NotesInputButton
 
 
