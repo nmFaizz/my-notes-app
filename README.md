@@ -1,1 +1,1 @@
-Simple CRUD notes app using vite React
+# Simple CREATE DELETE notes app using vite React
