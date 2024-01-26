@@ -72,7 +72,7 @@ textarea {
 
 .notes-input__button button {
     padding: 0.7rem 0;
-    border: 1px solid white;
+    border: 1px solid rgb(173, 168, 168);
     background: none; 
     color: white;
     border-radius: 7px;
@@ -97,7 +97,7 @@ textarea {
 
 .search-notes {
     padding: 0.3rem 1rem;
-    border: 1px solid white;
+    border: 1px solid rgb(173, 168, 168);
     border-radius: 7px;
     display: flex;
     align-items: center;
